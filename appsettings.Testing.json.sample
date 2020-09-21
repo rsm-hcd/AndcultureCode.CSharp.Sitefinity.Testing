@@ -1,0 +1,11 @@
+{
+  "SitefinityODataTestSettings": {
+    "BaseUrl": "http://localhost:myportnumber/",
+    "Username": "someone@somewhere.com",
+    "Password": "some_strange_password",
+    "GrantType": "password",
+    "Scope": "openid",
+    "ClientID": "clientId",
+    "ClientSecret": "clientSecret"
+  }
+}
