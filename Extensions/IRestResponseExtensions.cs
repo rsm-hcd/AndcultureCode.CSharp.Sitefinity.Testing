@@ -3,7 +3,7 @@ using RestSharp;
 using Shouldly;
 using System.Net;
 
-namespace Andculture.Sitefinity.Testing.Extensions
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Extensions
 {
     public static class IRestResponseExtensions
     {

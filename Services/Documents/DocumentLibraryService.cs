@@ -1,7 +1,7 @@
-﻿using Andculture.Sitefinity.Testing.Models.Configuration;
-using Andculture.Sitefinity.Testing.Models.Content.Documents;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Documents;
 
-namespace Andculture.Sitefinity.Testing.Services.Documents
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Services.Documents
 {
     public class DocumentLibraryService : ODataService<DocumentLibrary>
     {

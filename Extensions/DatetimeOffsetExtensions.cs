@@ -1,7 +1,7 @@
 ﻿using Shouldly;
 using System;
 
-namespace Andculture.Sitefinity.Testing.Extensions
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Extensions
 {
     public static class DatetimeOffsetExtensions
     {

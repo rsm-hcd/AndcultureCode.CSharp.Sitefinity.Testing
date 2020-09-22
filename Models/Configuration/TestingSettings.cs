@@ -1,4 +1,4 @@
-﻿namespace Andculture.Sitefinity.Testing.Models.Configuration
+﻿namespace AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration
 {
     public class TestingSettings
     {

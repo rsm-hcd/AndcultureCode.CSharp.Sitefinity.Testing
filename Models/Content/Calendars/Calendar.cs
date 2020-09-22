@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Andculture.Sitefinity.Testing.Models.Content.Calendars
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Calendars
 {
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class Calendar : Content

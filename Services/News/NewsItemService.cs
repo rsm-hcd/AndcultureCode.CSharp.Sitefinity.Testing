@@ -1,7 +1,7 @@
-﻿using Andculture.Sitefinity.Testing.Models.Configuration;
-using Andculture.Sitefinity.Testing.Models.Content.News;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.News;
 
-namespace Andculture.Sitefinity.Testing.Services.News
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Services.News
 {
     public class NewsItemService : ODataService<NewsItem>
     {

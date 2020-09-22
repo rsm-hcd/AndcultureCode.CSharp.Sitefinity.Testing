@@ -1,7 +1,7 @@
-﻿using Andculture.Sitefinity.Testing.Models.Configuration;
-using Andculture.Sitefinity.Testing.Models.Content.Calendars;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Calendars;
 
-namespace Andculture.Sitefinity.Testing.Services.Calendars
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Services.Calendars
 {
     public class EventService : ODataService<Event>
     {

@@ -29,9 +29,9 @@ When generating your own project specific test suite using this as a dependency,
 Below is an example of an integration test suite for the Blog Post Sitefinity service.
 
 ```csharp
-using Andculture.Sitefinity.Testing.Extensions;
-using Andculture.Sitefinity.Testing.Models.Content.Blogs;
-using Andculture.Sitefinity.Testing.Services.Blogs;
+using AndcultureCode.CSharp.Sitefinity.Testing.Extensions;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Blogs;
+using AndcultureCode.CSharp.Sitefinity.Testing.Services.Blogs;
 using Newtonsoft.Json;
 using Shouldly;
 using System;

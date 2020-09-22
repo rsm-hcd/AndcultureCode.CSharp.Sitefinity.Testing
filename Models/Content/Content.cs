@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Andculture.Sitefinity.Testing.Models.Content
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Models.Content
 {
     public class Content
     {

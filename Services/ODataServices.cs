@@ -1,11 +1,11 @@
-﻿using Andculture.Sitefinity.Testing.JsonSerialization;
-using Andculture.Sitefinity.Testing.Models.Configuration;
-using Andculture.Sitefinity.Testing.Models.Content;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.JsonSerialization;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
 
-namespace Andculture.Sitefinity.Testing.Services
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Services
 {
     public class ODataService<TContent> where TContent : Content
     {

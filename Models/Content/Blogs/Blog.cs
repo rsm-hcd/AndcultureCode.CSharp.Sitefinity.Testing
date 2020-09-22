@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Andculture.Sitefinity.Testing.Models.Content.Blogs
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Blogs
 {
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class Blog : Content
