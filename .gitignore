@@ -1,0 +1,15 @@
+# Build results
+x64/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+
+# VS generated files
+.vs/
+
+# NuGet Packages
+packages/*
+*.nupkg
+
+# Ignore user project files
+**/*.csproj.user
