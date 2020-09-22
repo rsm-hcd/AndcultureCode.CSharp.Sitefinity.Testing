@@ -1,6 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
+    <Company>andculture</Company>
+    <Description>.NET Core wrapper objects representing built-in Sitefinity module models and associated service files to interact and write integration tests to communicate with the Sitefinity OData API.  This should be used to create integration tests for built-in module content types, custom fields in those built-in module content types, and any dynamic modules built on top of Sitefinity.</Description>
+    <Authors>andculture</Authors>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/32297579?s=460&amp;v=4</PackageIconUrl>
+    <PackageId>AndcultureCode.CSharp.Sitefinity.Testing</PackageId>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing</PackageProjectUrl>
     <Version>1.0.0</Version>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>AndcultureCode.CSharp.Sitefinity.Testing</AssemblyName>
