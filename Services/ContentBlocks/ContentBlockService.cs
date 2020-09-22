@@ -1,7 +1,7 @@
-﻿using Andculture.Sitefinity.Testing.Models.Configuration;
-using Andculture.Sitefinity.Testing.Models.Content.ContentBlocks;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.ContentBlocks;
 
-namespace Andculture.Sitefinity.Testing.Services.ContentBlocks
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Services.ContentBlocks
 {
     public class ContentBlockService : ODataService<ContentBlock>
     {

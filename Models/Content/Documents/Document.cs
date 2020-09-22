@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Andculture.Sitefinity.Testing.Models.Content.Documents
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Documents
 {
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class Document : Content

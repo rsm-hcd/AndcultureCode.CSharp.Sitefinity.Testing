@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Andculture.Sitefinity.Testing.Models.Content.Images
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Images
 {
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class Album : Content

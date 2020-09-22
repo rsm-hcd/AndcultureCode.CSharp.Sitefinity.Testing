@@ -1,9 +1,9 @@
-﻿using Andculture.Sitefinity.Testing.Models.Configuration;
-using Andculture.Sitefinity.Testing.Models.Content;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content;
 using System;
 using Xunit.Abstractions;
 
-namespace Andculture.Sitefinity.Testing
+namespace AndcultureCode.CSharp.Sitefinity.Testing
 {
     public class ODataServiceTestsBase<TService, TModel> where TModel : Content, new()
     {

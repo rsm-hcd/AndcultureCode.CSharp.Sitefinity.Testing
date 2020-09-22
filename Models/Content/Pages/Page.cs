@@ -1,10 +1,10 @@
-﻿using Andculture.Sitefinity.Testing.Enumerations;
-using Andculture.Sitefinity.Testing.JsonSerialization.Converters;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Enumerations;
+using AndcultureCode.CSharp.Sitefinity.Testing.JsonSerialization.Converters;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace Andculture.Sitefinity.Testing.Models.Content.Pages
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Pages
 {
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class Page : Content

@@ -1,11 +1,11 @@
-﻿using Andculture.Sitefinity.Testing.Models.Configuration;
-using Andculture.Sitefinity.Testing.Models.Content.Images;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Images;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 using System.IO;
 
-namespace Andculture.Sitefinity.Testing.Services.Images
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Services.Images
 {
     public class ImageService : ODataService<Image>
     {

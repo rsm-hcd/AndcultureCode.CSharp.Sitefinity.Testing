@@ -1,9 +1,9 @@
-﻿using Andculture.Sitefinity.Testing.Models.Content;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Reflection;
 
-namespace Andculture.Sitefinity.Testing.JsonSerialization
+namespace AndcultureCode.CSharp.Sitefinity.Testing.JsonSerialization
 {
     public class ShouldSerializeContractResolver : DefaultContractResolver
     {

@@ -1,8 +1,8 @@
-﻿using Andculture.Sitefinity.Testing.Enumerations;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Enumerations;
 using Newtonsoft.Json;
 using System;
 
-namespace Andculture.Sitefinity.Testing.JsonSerialization.Converters
+namespace AndcultureCode.CSharp.Sitefinity.Testing.JsonSerialization.Converters
 {
     /// <summary>
     /// Responsible for converting PageType enums values into numeric values

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Andculture.Sitefinity.Testing.Interfaces
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Interfaces
 {
     public interface IComment
     {

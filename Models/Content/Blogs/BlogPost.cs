@@ -1,9 +1,9 @@
-﻿using Andculture.Sitefinity.Testing.Interfaces;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace Andculture.Sitefinity.Testing.Models.Content.Blogs
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Blogs
 {
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class BlogPost : Content

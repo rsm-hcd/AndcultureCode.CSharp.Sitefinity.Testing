@@ -1,7 +1,7 @@
-﻿using Andculture.Sitefinity.Testing.Models.Configuration;
-using Andculture.Sitefinity.Testing.Models.Content.Pages;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration;
+using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Pages;
 
-namespace Andculture.Sitefinity.Testing.Services.Pages
+namespace AndcultureCode.CSharp.Sitefinity.Testing.Services.Pages
 {
     public class PageService : ODataService<Page>
     {

@@ -1,4 +1,4 @@
-﻿using Andculture.Sitefinity.Testing.Models.Configuration;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Models.Configuration;
 using AndcultureCode.CSharp.Core.Utilities.Configuration;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -6,7 +6,7 @@ using RestSharp;
 using System;
 using System.IO;
 
-namespace Andculture.Sitefinity.Testing
+namespace AndcultureCode.CSharp.Sitefinity.Testing
 {
     public class ODataSession
     {

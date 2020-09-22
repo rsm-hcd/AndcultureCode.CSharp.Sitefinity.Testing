@@ -1,4 +1,4 @@
-﻿namespace Andculture.Sitefinity.Testing.Enumerations
+﻿namespace AndcultureCode.CSharp.Sitefinity.Testing.Enumerations
 {
     public enum RedirectPage
     {

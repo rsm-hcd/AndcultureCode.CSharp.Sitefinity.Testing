@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Andculture.Sitefinity.Testing
+namespace AndcultureCode.CSharp.Sitefinity.Testing
 {
     public class ODataSessionFixture : IDisposable
     {
