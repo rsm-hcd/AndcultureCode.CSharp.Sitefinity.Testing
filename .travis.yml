@@ -1,0 +1,14 @@
+dotnet: 3.1.402
+env:
+  global:
+  - DOTNET_CLI_TELEMETRY_OPTOUT: 1
+language: csharp
+mono: none
+script:
+- dotnet restore
+- dotnet build
+solution: Andculture.Sitefinity.Testing.sln
+notifications:
+  slack:
+    rooms:
+      secure: rrQx+jWigwQ3J0ME9mewiJGPFhRosnfQHdFBOdq8ZyA0+7DrUk7MjN4PxjeBMn6X+AsL8jYTVJnpk6LO1iQJumxl43izSVAauWYvEVoQf4vodZQ27TBMN37EITd6omNyKE2QZN8rltTOXr7kEuDrzjMDy8tJ28VhbJLdvJ7aFVktEmUgGgqP9Al74yUPGGSYGNXfhrLUlNIF9mAYmNfnhC/9GSa7bhNGbSAU6E1++vqVfS3vrK5V/C4HUvqW5DQ0HOBAk60OoN09cKe93nCQXWOec7N8SFCU2/9jv/vcRFeQtRltDaRiWBcuY/YMSRJvvVYNyOYNPm45PiYvdsy7UF+EyWG3OMdA2PCAKSPyb/0Bgn+cS02J0/gD42/urRaJkYRgu3CJHPByPiW4NGzIuPLntkDaIxmu4lZ9KFrnSIy1eO+z6ovckeYfv7qygUAFEpf2Jq5VL/3zD0Ou1th47yd1zlIoQfS90KcbUOqhzZPWfKexjdu6+gXRF9kdE66HeSUY9JwtftfA6qFDzX5+C9ZqWDWhQlv2YmIXUIWd1SnyfJQ1r3MYotxGSEcdwDtLgnC7umIrl9eut5qgO9rZyL5KrDqMb6jGSQ5r1ywKXWvR6yj49pUnGJe5EzT5zjM8vXWM9mHNdK7WT7Vv2AiBfzvBVXV5ivKpDWVcKO/jxWk=
