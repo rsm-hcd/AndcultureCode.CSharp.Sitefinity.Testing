@@ -2,7 +2,13 @@
 
 .NET Core wrapper objects representing built-in Sitefinity module models and associated service files to interact and write integration tests to communicate with the Sitefinity OData API.  This should be used to create integration tests for built-in module content types, custom fields in those built-in module content types, and any dynamic modules built on top of Sitefinity.
 
-NOTE: This is a rewrite of the Sitefinity CMS test framework found [here](https://github.com/Sitefinity/test-framework-core).  This repo was generated instead of using the Sitefinity repo for several reasons:
+## Sitefinity Version Support
+
+This source was tested against Sitefinity release 13.1 (build 7421).  This source will likely work with all Sitefinity 13 releases.  In cases where this does not work against release a 13, feel free to update to make it compatible.  Releases prior to 13 are not and should not be supported in this source.
+
+## Why a rewrite?
+
+This is a rewrite of the Sitefinity CMS test framework found [here](https://github.com/Sitefinity/test-framework-core).  This repo was generated instead of using the Sitefinity repo for several reasons:
 
 1. The Sitefinity repo uses .NET Framework (not .NET Core)
 2. The Sitefinity repo was using less than desirable code for instance...
