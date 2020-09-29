@@ -4,7 +4,7 @@
 
 ## Sitefinity Version Support
 
-This source was tested against Sitefinity release 13.1 (build 7421).  This source will likely work with all Sitefinity 13 releases.  In cases where this does not work against release a 13, feel free to update to make it compatible.  Releases prior to 13 are not and should not be supported in this source.
+This source was tested against Sitefinity version 13.1 (build 7421).  This source will likely work with all Sitefinity version 13 releases.  In cases where this does not work against Sitefinity version 13 releases, feel free to update to make it compatible.  Releases prior to 13 are not and should not be supported in this source.
 
 ## Why a rewrite?
 
