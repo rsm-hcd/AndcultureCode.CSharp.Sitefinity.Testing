@@ -1,7 +1,8 @@
 {
   "SitefinityODataTestSettings": {
-    "BaseUrl": "http://localhost:myportnumber/",
+    "BaseUrl": "https://localhost:myportnumber/",
     "Username": "someone@somewhere.com",
+    "OutputCacheAuthKey": "some_user_defined_auth_key",
     "Password": "some_strange_password",
     "GrantType": "password",
     "Scope": "openid",
