@@ -8,7 +8,7 @@
     <PackageId>AndcultureCode.CSharp.Sitefinity.Testing</PackageId>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing</PackageProjectUrl>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>AndcultureCode.CSharp.Sitefinity.Testing</AssemblyName>
     <RootNamespace>AndcultureCode.CSharp.Sitefinity.Testing</RootNamespace>
