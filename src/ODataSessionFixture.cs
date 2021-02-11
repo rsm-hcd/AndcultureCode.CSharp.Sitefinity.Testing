@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AndcultureCode.CSharp.Sitefinity.Core.Models.Configuration;
+using AndcultureCode.CSharp.Sitefinity.Core.Services;
+using System;
 
 namespace AndcultureCode.CSharp.Sitefinity.Testing
 {
@@ -8,7 +10,8 @@ namespace AndcultureCode.CSharp.Sitefinity.Testing
 
         public ODataSessionFixture()
         {
-            Session = new ODataSession();
+            var oDataConnectionSettings = new ODataConnectionSettings();
+            Session = new ODataSession(oDataConnectionSettings);
             Session.Authenticate();
         }
 

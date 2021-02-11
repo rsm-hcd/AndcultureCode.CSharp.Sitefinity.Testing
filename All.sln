@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndcultureCode.CSharp.Sitefinity.Testing", "src\AndcultureCode.CSharp.Sitefinity.Testing.csproj", "{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{08539B60-3027-46B5-B140-3E6F79749CC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Testing|Any CPU = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Production|Any CPU.Build.0 = Production|Any CPU
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E}.Testing|Any CPU.Build.0 = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1D3A9A3-AE5C-4603-9BB5-12602B8B4B4E} = {08539B60-3027-46B5-B140-3E6F79749CC8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B9FE331-9BCC-4E1B-852C-14FA6F36920A}
+	EndGlobalSection
+EndGlobal
