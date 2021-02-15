@@ -1,4 +1,4 @@
-﻿namespace AndcultureCode.CSharp.Sitefinity.Testing
+﻿namespace AndcultureCode.CSharp.Sitefinity.Testing.Constants
 {
     public static class RestResponseContentData
     {

@@ -1,4 +1,5 @@
 ﻿using AndcultureCode.CSharp.Sitefinity.Core.Models.Services;
+using AndcultureCode.CSharp.Sitefinity.Testing.Constants;
 using Shouldly;
 
 namespace AndcultureCode.CSharp.Sitefinity.Testing.Extensions
@@ -18,7 +19,7 @@ namespace AndcultureCode.CSharp.Sitefinity.Testing.Extensions
 
             if (restResponseResult.RestResponse.IsWaitAMomentResponse())
             {
-                /* 
+                /*
                  * Sitefinity sometimes returns the "Please wait a moment" response instead of the expected status code indicating something is happening
                  * like Sitefinity is rebooting, upgrading, etc. Instead of outputting the entire HTML content including the CSS and HTML markup,
                  * return a simple message so it's easier to understand when failures occur

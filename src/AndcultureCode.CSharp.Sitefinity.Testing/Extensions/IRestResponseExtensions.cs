@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using AndcultureCode.CSharp.Sitefinity.Testing.Constants;
+using Newtonsoft.Json.Linq;
 using RestSharp;
 using Shouldly;
 using System.Net;
@@ -9,7 +10,7 @@ namespace AndcultureCode.CSharp.Sitefinity.Testing.Extensions
     {
         /// <summary>
         /// Checks if the response returned from Sitefinity is the standard
-        /// "Please wait a moment" response, indicating that the site is still 
+        /// "Please wait a moment" response, indicating that the site is still
         /// starting up.
         /// </summary>
         /// <param name="restResponse"></param>

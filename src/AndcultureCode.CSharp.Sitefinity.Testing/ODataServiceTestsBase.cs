@@ -1,5 +1,4 @@
 ﻿using AndcultureCode.CSharp.Sitefinity.Core.Interfaces;
-using AndcultureCode.CSharp.Sitefinity.Core.Models.Configuration;
 using AndcultureCode.CSharp.Sitefinity.Core.Services;
 using AndcultureCode.CSharp.Testing.Factories;
 using AndcultureCode.CSharp.Testing.Tests;
