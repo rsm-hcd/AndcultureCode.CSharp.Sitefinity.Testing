@@ -2,7 +2,7 @@ language: csharp
 mono: latest
 script:
 - msbuild
-solution: Andculture.Sitefinity.Testing.sln
+solution: All.sln
 notifications:
   slack:
     on_failure: always
