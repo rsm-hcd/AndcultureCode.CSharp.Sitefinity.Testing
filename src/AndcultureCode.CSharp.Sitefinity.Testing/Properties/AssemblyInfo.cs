@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AndcultureCore.CSharp.Sitefinity.Testing")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Base classes, utilities, and extensions to facilitate writing tests for Sitefinity.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("andculture")]
 [assembly: AssemblyProduct("AndcultureCore.CSharp.Sitefinity.Testing")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright © 2020 andculture")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
