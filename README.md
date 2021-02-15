@@ -1,87 +1,55 @@
 # AndcultureCode.CSharp.Sitefinity.Testing [![Build Status](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing.svg?branch=main)](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing)
 
-.NET Core wrapper objects representing built-in Sitefinity module models and associated service files to interact and write integration tests to communicate with the Sitefinity OData API.  This should be used to create integration tests for built-in module content types, custom fields in those built-in module content types, and any dynamic modules built on top of Sitefinity.
+Base classes, utilities, and extensions to facilitate writing tests for Sitefinity.
 
 ## Sitefinity Version Support
 
 - Compatibility: `13+`
-- Tested with: `13.1 (build 7421)`
-
-## Why a rewrite?
-
-This is a rewrite of the Sitefinity CMS test framework found [here](https://github.com/Sitefinity/test-framework-core).  This repo was generated instead of using the Sitefinity repo for several reasons:
-
-1. The Sitefinity repo uses .NET Framework (not .NET Core)
-2. The Sitefinity repo was using less than desirable code for instance...
-   - dictionaries in content models
-   - no base test service
-   - content models had name of service contained with it
-3. The Sitefinity repo had problems with it
-   - until recently, tests for publishing were failing
-   - some of the tests were failing when asserting on successful creation of content
-4. The Sitefinity repo wasn't a comprehensive suite of tests covering all of their built-in content types
-
-This project is stand alone without any associated tests intentionally.  This is meant to serve as a base for generating your own project specific testing project.  
-
-## Setup 
-
-Before referencing this project, please ensure you have a Sitefinity instance readily available and an account set up in your Sitefinity instance.  See the **Installation** section found [here](https://github.com/Sitefinity/test-framework-core) for more details on the setup of the Sitefinity instance account.
-
-Copy the contents of `appsettings.json.sample` and paste them into your test project's `appsettings.json` file.  Update the settings to match th account for your Sitefinity instance.
-
-When generating your own project specific test suite using this as a dependency, you should consider having a *testing* environment configured which is available to run your tests against before continuing code changes through your CI/CD pipeline.
+- Tested with: `13.2 (build 7521)`
 
 ## Example
 
 Below is an example of an integration test suite for the Blog Post Sitefinity service.
 
 ```csharp
+using AndcultureCode.CSharp.Sitefinity.Testing;
 using AndcultureCode.CSharp.Sitefinity.Testing.Extensions;
-using AndcultureCode.CSharp.Sitefinity.Testing.Models.Content.Blogs;
-using AndcultureCode.CSharp.Sitefinity.Testing.Services.Blogs;
-using Newtonsoft.Json;
+using OData.Services.Models.Blogs;
+using OData.Services.Services.Blogs;
 using Shouldly;
 using System;
-using System.Net;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace OData.Integration.Tests.Services.Blogs
+namespace OData.Services.Tests.Services.Blogs
 {
     [Collection("OData Session Collection")]
-    public class BlogPostServiceTests : ODataServiceTestsBase<BlogPostService, BlogPost>, IDisposable
+    public class BlogPostODataServicesTests : ODataServiceTestsBase<BlogPostODataServices, BlogPostDto>, IDisposable
     {
         #region Members
 
-        BlogService _blogService;
-        Blog _blog;
+        private BlogODataServices _blogService;
+        private BlogDto _blog;
 
         #endregion Members
 
         #region Setup and Teardowns
 
-        public BlogPostServiceTests(
+        public BlogPostODataServicesTests(
             ODataSessionFixture fixture,
             ITestOutputHelper output) : base(fixture, output)
         {
             var session = fixture.Session;
-            _blogService = new BlogService(session.ODataTestSettings, session.AccessToken);
-            _blog = new Blog();
-            Model = new BlogPost();
-            Sut = new BlogPostService(session.ODataTestSettings, session.AccessToken);
+            _blogService = new BlogODataServices(session.ODataConnectionSettings, session);
+            _blog = new BlogDto();
+            Model = new BlogPostDto();
+            Sut = new BlogPostODataServices(session.ODataConnectionSettings, session);
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
-            if (Model.ID.HasValue && Sut.GetItem(Model.ID.Value).StatusCode == HttpStatusCode.OK)
-            {
-                Sut.Delete(Model.ID.Value);
-            }
-
-            if (_blog.ID.HasValue && _blogService.GetItem(_blog.ID.Value).StatusCode == HttpStatusCode.OK)
-            {
-                _blogService.Delete(_blog.ID.Value);
-            }
+            base.Dispose();
+            DisposeOfExistingModel(_blogService, _blog);
         }
 
         #endregion Setup and Teardown
@@ -92,7 +60,7 @@ namespace OData.Integration.Tests.Services.Blogs
         public void CreateDraft_When_Data_Provided_Then_Returns_Created_Status_Code_With_Returned_Data_Object_With_Same_Data()
         {
             // Arrange & Act
-            var responseModel = CreateDraft();
+            var responseModel = CreateDraft("CreateDraft");
 
             // Assert
             responseModel.ShouldNotBeNull();
@@ -102,7 +70,7 @@ namespace OData.Integration.Tests.Services.Blogs
         public void Modify_When_Updating_Draft_Then_Returns_NoContent_Status_Code_And_Updates_Data_Object_With_Same_Data()
         {
             // Arrange
-            CreateDraft();
+            CreateDraft("Modify");
 
             Model.Title += "Updated";
             Model.Description += "Updated";
@@ -114,10 +82,10 @@ namespace OData.Integration.Tests.Services.Blogs
             var response = Sut.Modify(Model);
 
             // Assert
-            response.StatusCode.ShouldBe(HttpStatusCode.NoContent);
+            response.ShouldBeExpectedStatusCode();
 
-            response = Sut.GetItem(Model.ID.Value);
-            var responseModel = JsonConvert.DeserializeObject<BlogPost>(response.Content);
+            response = Sut.GetItem(Model.Id.Value);
+            var responseModel = response.ResultObject;
             responseModel.Title.ShouldBe(Model.Title);
             responseModel.Description.ShouldBe(Model.Description);
             responseModel.Content.ShouldBe(Model.Content);
@@ -129,51 +97,93 @@ namespace OData.Integration.Tests.Services.Blogs
         public void Delete_When_Deleting_Draft_Then_Returns_NoContent_Status_Code()
         {
             // Arrange
-            var responseModel = CreateDraft();
+            var responseModel = CreateDraft("Delete");
 
             // Act
-            var response = Sut.Delete(responseModel.ID.Value);
+            var response = Sut.Delete(responseModel.Id.Value);
 
             // Assert
-            response.StatusCode.ShouldBe(HttpStatusCode.NoContent);
+            response.ShouldBeExpectedStatusCode();
         }
 
         [Fact]
         public void Publish_When_Publishing_Draft_Then_Returns_Ok_Status_Code_And_Published_Response()
         {
             // Arrange
-            var responseModel = CreateDraft();
+            var responseModel = CreateDraft("Publish");
 
             // Act
-            var response = Sut.Publish(responseModel.ID.Value);
+            var response = Sut.Publish(responseModel.Id.Value);
 
             // Assert
-            response.ShouldEqualPublishedContentResponse();
+            response.RestResponse.ShouldEqualPublishedContentResponse();
+        }
+
+        [Fact]
+        public void GetItem_When_Retrieving_Item_Then_Returns_Ok_Status_Code_And_Item()
+        {
+            // Arrange
+            var responseModel = CreateDraft("GetItem");
+
+            // Act
+            var response = Sut.GetItem(responseModel.Id.Value);
+
+            // Assert
+            response.ShouldBeExpectedStatusCode();
+            response.ResultObject.Id.ShouldBe(responseModel.Id);
+        }
+
+        [Fact]
+        public void GetCount_When_Retrieving_Count_Then_Returns_Ok_Status_Code_And_Count()
+        {
+            // Arrange
+            CreateDraft("GetCount");
+
+            // Act
+            var response = Sut.GetCount();
+
+            // Assert
+            response.ShouldBeExpectedStatusCode();
+            response.ResultObject.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public void Get_When_Retrieving_Items_Then_Returns_Ok_Status_Code_And_Items()
+        {
+            // Arrange
+            CreateDraft("Get");
+
+            // Act
+            var response = Sut.Get();
+
+            // Assert
+            response.ShouldBeExpectedStatusCode();
+            response.ResultObject.Count.ShouldBeGreaterThanOrEqualTo(1);
         }
 
         #endregion Tests
 
-        #region Private Methods
+        #region Overrides
 
-        private BlogPost CreateDraft()
+        protected BlogPostDto CreateDraft(string methodBeingTested)
         {
-            _blog.Title = "Title";
+            _blog.Title = GetRandomString("Title");
             var newBlogResponse = _blogService.CreateDraft(_blog);
 
-            _blog = JsonConvert.DeserializeObject<Blog>(newBlogResponse.Content);
+            _blog = newBlogResponse.ResultObject;
 
-            Model.Title = "Title";
-            Model.Description = "Description";
-            Model.Content = "Content";
+            Model.Title = GetRandomString("Title");
+            Model.Description = GetRandomString("Description");
+            Model.Content = GetRandomString("Content");
             Model.AllowComments = false;
-            Model.Summary = "Summary";
-            Model.ParentId = _blog.ID;
+            Model.Summary = GetRandomString("Summary");
+            Model.ParentId = _blog.Id;
 
             var response = Sut.CreateDraft(Model);
-            response.StatusCode.ShouldBe(HttpStatusCode.Created);
+            response.ShouldBeExpectedStatusCode();
 
-            var responseModel = JsonConvert.DeserializeObject<BlogPost>(response.Content);
-            Model.ID = responseModel.ID;
+            var responseModel = response.ResultObject;
+            Model.Id = responseModel.Id;
 
             responseModel.Title.ShouldBe(Model.Title);
             responseModel.Description.ShouldBe(Model.Description);
@@ -185,7 +195,7 @@ namespace OData.Integration.Tests.Services.Blogs
             return responseModel;
         }
 
-        #endregion Private Methods
+        #endregion Overrides
     }
 }
 ```
