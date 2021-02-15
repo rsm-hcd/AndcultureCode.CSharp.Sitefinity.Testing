@@ -62,8 +62,8 @@
       <HintPath>..\..\packages\AndcultureCode.CSharp.Extensions.0.4.5\lib\netstandard2.0\AndcultureCode.CSharp.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="AndcultureCode.CSharp.Sitefinity.Core, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\AndcultureCode.CSharp.Sitefinity.Core.1.0.1\lib\net48\AndcultureCode.CSharp.Sitefinity.Core.dll</HintPath>
+    <Reference Include="AndcultureCode.CSharp.Sitefinity.Core, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AndcultureCode.CSharp.Sitefinity.Core.1.0.2\lib\net48\AndcultureCode.CSharp.Sitefinity.Core.dll</HintPath>
     </Reference>
     <Reference Include="AndcultureCode.CSharp.Testing, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\AndcultureCode.CSharp.Testing.0.7.0\lib\netstandard2.0\AndcultureCode.CSharp.Testing.dll</HintPath>
