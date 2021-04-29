@@ -1,6 +1,6 @@
 # AndcultureCode.CSharp.Sitefinity.Testing 
 [![Build Status](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing.svg?branch=main)](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Base classes, utilities, and extensions to facilitate writing tests for Sitefinity.
@@ -214,6 +214,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/KevinBusch"><img src="https://avatars.githubusercontent.com/u/775414?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Busch</b></sub></a><br /><a href="https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing/commits?author=KevinBusch" title="Code">💻</a> <a href="https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing/pulls?q=is%3Apr+reviewed-by%3AKevinBusch" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing/commits?author=KevinBusch" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://github.com/cspath1"><img src="https://avatars.githubusercontent.com/u/26265706?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cody Spath</b></sub></a><br /><a href="https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing/pulls?q=is%3Apr+reviewed-by%3Acspath1" title="Reviewed Pull Requests">👀</a> <a href="#ideas-cspath1" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Stefanie899"><img src="https://avatars.githubusercontent.com/u/37462028?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stefanie Leitch</b></sub></a><br /><a href="https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing/commits?author=Stefanie899" title="Code">💻</a> <a href="https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing/commits?author=Stefanie899" title="Tests">⚠️</a> <a href="https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Testing/pulls?q=is%3Apr+reviewed-by%3AStefanie899" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
