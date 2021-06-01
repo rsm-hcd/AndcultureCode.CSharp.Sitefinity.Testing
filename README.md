@@ -8,7 +8,7 @@ Base classes, utilities, and extensions to facilitate writing tests for Sitefini
 ## Sitefinity Version Support
 
 - Compatibility: `13+`
-- Tested with: `13.2 (build 7521)`
+- Tested with: `13.3 (build 7625)`
 
 ## Example
 
